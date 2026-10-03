@@ -1,0 +1,30 @@
+(HCM-KS26-CNTT2_IT108-K26_Session02_Ex03)
+
+1.Yêu cầu nghiệp vụ:
+
+- Sử dụng mô hình "Ban quản lý tòa nhà" để giải thích tình huống:
+RAM là bàn làm việc của nhân viên
+CPU là nhân viên thực hiện công việc
+Storage là các tủ tài liệu,chứa các hồ sơ
+Hiện tượng 95% RAM:khi mở Chrome và VScode chạy nhiều công việc liên tục không ngừng nghỉ, khiến RAM (bàn làm việc) nhận việc quá mức dẫn đến quả tải và CPU (nhân viên) không thể xử lý hết công việc này.
+2.Luồng dữ liệu theo mô hình IPO khi nạp ứng dụng từ Storage vào RAM:
+Input (Đầu vào): Người dùng bấm vào ứng dụng Hệ điều hành tiếp nhận yêu cầu, xác định vị trí file thực thi exe trên ổ cứng
+Process (Xử lý):
+Hệ thống quản lý bộ nhớ (Memory Manager) kiểm tra dung lượng RAM trống, tìm chỗ trống phù hợp và cấp phát không gian chạy
+Hệ thống Quản lý Tiến trình (Process Manager) tạo một Tiến trình mới, cấp phát khối điều khiển tiến trình (Process Control Block).
+Mã,dữ liệu của ứng dụng được đọc từ Storage và truyền tải vào các ô nhớ trên RAM.
+Output (Đầu ra): Ứng dụng được tải hoàn tất vào RAM, CPU bắt đầu chạy các lệnh của tiến trình, giao diện đồ họa hiển thị lên màn hình để người dùng tương tác.
+3.Ràng buộc & Bẫy dữ liệu:
+Nếu sinh viên cố gắng End task System (hệ thống chính) thì Window sẽ bị lỗi như Blue Screen of Death và khởi động lại máy
+-Khác biệt hiệu suất khi RAM đầy giữa SSD và HDD:
+HDD: máy sẽ chạy rất chậm (chỉ khoảng 50 - 100 MB/s),ổ cứng phả di chuyển cơ học liên tục do quá tải,máy có thể bị đơ cứng.
+SDD: hiện đại hơn HDD (từ 500 MB/s đến vài nghìn MB/s),máy sẽ bị chậm nhẹ nhưng tương đối vẫn sử dụng để sử dụng web,và phản hồi.
+4.Yêu cầu đầu ra:
+Báo cáo phân tích: Giải thích hiện tượng giật lag dựa trên chức năng Quản lý tiến trình và Quản lý bộ nhớ của hệ điều hành. 
+-Quản lý bộ nhớ
+cạn kiệt không gian lưu trữ tạm thời,do mở quá nhiều tiến trình làm hết dung lượng trống của RAM.
+Hiện tượng hoán đổi liên tục, hệ thống quản lý bộ nhớ sẽ đem các tác vụ ít sử dụng xuống ổ cứng và khi người dùng mở các tác vụ cũ thì nó sẽ iên tục hoán đổi dữ liệu qua lại giữa RAM và Storage khiến hệ thống bị nghẽn và gây ra độ trễ lớn.
+-Quản lý tiến trình:
+Khi mở hai chương trình ,quá nhiều tác vụ phải chạy song song cùng lúc, RAM quá tải và khiến bộ lập lịch (CPU Scheduler) phải liên tục ngắt tiến trình này để nhường chỗ cho tiến trình khác thực thi các tác vụ của RAM thay vì xử lý công việc thực tế của người dùng.
+Sơ đồ phân tầng kiến trúc từ User đến Hardware (Hành động mở trình duyệt)
+ User (Người dùng) -> (Thao tác click chuột mở Chrome) -> Application Layer (Ứng dụng: Google Chrome / VS Code) -> (Gửi lời gọi hệ thống - System Call yêu cầu cấp phát tài nguyên) -> Operating System (Hệ điều hành: Quản lý Tiến trình & Bộ nhớ) -> (Điều phối phần cứng: Nạp dữ liệu từ ổ cứng vào RAM, phân bổ thời gian CPU) -> Hardware (Phần cứng: CPU, RAM, SSD/HDD Storage)
