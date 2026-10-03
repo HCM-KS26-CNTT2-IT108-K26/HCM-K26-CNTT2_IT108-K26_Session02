@@ -1,0 +1,14 @@
+(HCM-KS26-CNTT2_IT108-K26_Session02_BTVN07)
+Yêu cầu đầu ra
+
+Phần 1: Phân tích vấn đề
+Lỗi sai:
+posted phim hài.jpg :lỗi vừa có cách dòng và có chữ tiếng việt
+LậtMặt6-Bảnchuẩn.jpeg: lỗi có chữ tiếng việt
+icon tài khoản.SVG: lỗi vừa có cách dòng và có chữ tiếng việt
+Avengers_end_game_final_2.PNG: có chữ hoa ở đầu (Avengers)
+Phần 2:sửa lỗi kebab-case 
+posted-phim-hai.jpg
+lat-mat-6-ban-chuan.jpeg
+icon-tai-khoan.SVG
+avengers-end-game-final-2.png
