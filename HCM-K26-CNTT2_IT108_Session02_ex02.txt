@@ -1,0 +1,6 @@
+(HCM-KS26-CNTT2_IT108-K26_Session02_Ex02)
+Phần 1 nguyên nhân lỗi:
+- Máy của giáo viên không có User người dùng là Bình-K26,vì User là tệp lưu trữ cá nhân của mỗi người khác nhau 
+- Phụ thuộc phân vùng ổ đĩa: nếu máy là Linux,Mac OS của giáo viên không có ổ C 
+Phần 2: Sửa lỗi với đường dẫn tương đối:
+image_path = "./assets/logo.png"
