@@ -1,0 +1,8 @@
+(HCM-KS26-CNTT2_nhập môn công nghệ thông tin_Session02_Bài1:Đảm bảo an toàn dữ liệu trong hệ thống)
+
+Phần 1 (Phân tích): các 3 lỗi sai trong lập luận và cách làm của Nam.
+Lỗi 1: Lưu vào ổ C:\ vì đây là ổ đĩa chính, giúp máy tính truy cập file nhanh nhất.
+Lỗi 2: Đặt tên thư mục có khoảng trắng để dễ đọc
+Lỗi 3: Lưu vào thư mục Windows\System32 để các file code được hệ điều hành "bảo vệ" tối đa
+Phần 2 (sửa lỗi): vẽ lại sơ đồ cây
+D:\HCM_KS26_CNTT2\nhap-mon-CNTT\Session-02\bai1.py
